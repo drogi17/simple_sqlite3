@@ -20,7 +20,7 @@ class DataBase:
         self.conn = sqlite3.connect(data_base_file, check_same_thread=False)
         self.cursor = self.conn.cursor()
 
-    def close():
+    def close(self):
         self.conn.close()
 
     def add_table(self, name, columns, PRIMARY_KEYS=None):
