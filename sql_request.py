@@ -54,9 +54,9 @@ class DataBase:
             args_to_add = ()
             if type(args).__name__ == 'tuple' or type(args).__name__ == 'list':
                 for arg in args:
-                    args_to_add += (arg.replace("'", ':$"$:'), )
+                    args_to_add += (str(arg).replace("'", ':$"$:'), )
             elif type(args).__name__ == 'str':
-                args_to_add = (args.replace("'", ':$"$:'))
+                args_to_add = (str(arg).replace("'", ':$"$:'))
             request_data = self.cursor.execute(request% args_to_add).fetchall()
         else:
             request_data = self.cursor.execute(request).fetchall()
