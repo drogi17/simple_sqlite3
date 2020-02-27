@@ -7,7 +7,7 @@ from sql_request import *
 db = DataBase('database')
 db.version #get version
 
-# add table: (name, columns(name, type, PRIMARY KEY) PRIMARY KEY is not necessary
+# add table: (name, columns(name, type, PRIMARY KEY)) PRIMARY KEY is not necessary
 columns = {  'id': 'int',
             'name': 'str'
         }
