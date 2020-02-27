@@ -11,7 +11,7 @@ db.version #get version
 columns = {  'id': 'int',
             'name': 'str'
         }
-db.add_table('users', tables, 'id') 
+db.add_table('users', columns, 'id') 
 
 # make a request
 db.request('''select * from messages;''')
